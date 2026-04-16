@@ -10,7 +10,7 @@
 # Author:  Ken True - webmaster@saratoga-weather.org
 #
 # Reguires: installation of php-shapefile from https://gasparesganga.com/labs/php-shapefile/
-#           unzipped shapefiles from https://www.weather.gov/gis/AWIPSShapefiles placed<br>
+#           unzipped shapefiles from https://www.weather.gov/gis/AWIPSShapefiles placed
 #             in ./shapefiles/ subdirecory. the following files are used:
 #           Forecast:  https://www.weather.gov/gis/PublicZones
 #           County:    https://www.weather.gov/gis/Counties
@@ -24,6 +24,7 @@
 # Version 1.00 - 02-Sep-2023 - initial release
 # Version 1.01 - 16-Feb-2024 - update for March 5, 2024 shapefiles
 # Version 1,01 - 17-Mar-2025 - update for March 18, 2025 shapefiles
+# Versopm 1.02 - 16-Apr-2026 - update for April 16, 2026 shapefiles
 #
 #------------------------------------------------------------------------------
 # Settings:
@@ -56,7 +57,7 @@ $outfile = 'NWS-zones-inc-202308-test.txt';
 
 //*/
   
-// March 18, 2025 files 
+/* March 18, 2025 files 
 $toDo = array( # list of shapefiles to index
 # ID   Array     .shp file location
 	'F|fcstZones|./shapefiles/z_18mr25.shp',
@@ -64,14 +65,24 @@ $toDo = array( # list of shapefiles to index
 	'M|marineZones|./shapefiles/mz18mr25.shp',
 	'W|fireZones|./shapefiles/fz18mr25.shp',
 );
+//*/
+  
+// March 18, 2025 files 
+$toDo = array( # list of shapefiles to index
+# ID   Array     .shp file location
+	'F|fcstZones|./shapefiles/z_16ap26.shp',
+	'C|countyZones|./shapefiles/c_16ap26.shp',
+	'M|marineZones|./shapefiles/mz16ap26.shp',
+	'W|fireZones|./shapefiles/fz16ap26.shp',
+);
 
-$outfile = 'NWS-zones-inc-202503-test.txt';
+$outfile = 'NWS-zones-inc-2026-04-test.txt';
 //*/
 
 #
 # end of settings
 #------------------------------------------------------------------------------
-$Version = "make-NWS-zones-index.php - V1.02 - 17-Mar-2025";
+$Version = "make-NWS-zones-index.php - V1.03 - 16-Apr-2026";
 
 header('Content-type: text/plain;charset=ISO-8859-1');
 include_once('NWStimeZones.php');
